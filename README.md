@@ -6,4 +6,4 @@ I have used various versions of this code on embedded systems over the years. Th
 
 I upload this to Github so i wouldn't lose the code and as an example of code I wrote back in the day.
 
-Most of the code is portable. The OS specific parts are in the directories W95 (windows port) and VXW (vxworks port).
+Most of the code is portable C. The OS specific parts are in the directories W95 (windows port) and VXW (vxworks port).
