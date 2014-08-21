@@ -1,0 +1,39 @@
+# FOR EACH FILE TYPE
+# CONVERT THE FILE TO HEX
+# OUTPUT A DECLARATION LINE TO THE COMMON INCLUDE FILE
+!include ..\hex.mak
+
+HTMLFILE=javahtml
+GIFFILE=javagif
+
+JAVA  = ct.java  example.java streaming.java
+CLASS = ct.class example.class streaming.class readstream.class
+HTML  = ct.html  example.html streaming.html
+GIF   = java.gif
+
+all: 	javasrc.c javaclas.c javahtml.c javagif.c \
+		$(JAVA:.java=.jex) 	\
+		$(CLASS:.class=.cex) \
+		$(HTML:.html=.hex) 	\
+		$(GIF:.gif=.gex)
+
+javasrc.c:$(JAVA)
+	echo #include "javasrc.h" >javasrc.c
+	
+javaclas.c:$(CLASS)
+	echo #include "javaclas.h" >javaclas.c
+	
+javahtml.c:$(HTML)
+	echo #include "javahtml.h" >javahtml.c
+	
+javagif.c:$(GIF)
+	echo #include "javagif.h" >javagif.c
+	
+clean:
+	erase *.gex
+	erase *.hex
+	erase *.jex
+	erase *.cex
+	erase *.h
+	erase *.c
+

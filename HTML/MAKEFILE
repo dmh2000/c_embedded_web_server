@@ -1,0 +1,24 @@
+.SUFFIXES : .gif .htm .hex .gex
+
+# FOR EACH FILE TYPE
+# CONVERT THE FILE TO HEX
+# OUTPUT A DECLARATION LINE TO THE COMMON INCLUDE FILE
+!include ..\hex.mak
+
+HTM=hexhtml.htm table.htm exform.htm
+GIF=firetn.gif firebal2.gif
+	
+all: html.c $(HTM:.htm=.hex) $(GIF:.gif=.gex)
+
+html.c : $(HTM)
+	echo #include "html.h" >html.c
+
+gif.c : $(GIF)
+	echo #include "gif.h" >gif.c
+	
+clean:
+	erase *.gex
+	erase *.hex
+	erase *.c
+	erase *.h
+

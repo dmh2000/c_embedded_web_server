@@ -1,0 +1,7 @@
+!include ..\lint.mak
+	
+headers: makehex.cbk makedef.cbk makedec.cbk header.cbk
+
+clean :
+	rm *.cbk *.out *.hbk
+	

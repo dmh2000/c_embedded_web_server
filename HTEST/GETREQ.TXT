@@ -1,0 +1,2 @@
+GET http://hostname HTTP/1.0
+

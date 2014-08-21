@@ -1,0 +1,7 @@
+!include ..\lint.mak
+	
+headers: ews.hbk ewsapp.hbk
+
+clean :
+	rm *.cbk *.out *.hbk
+	

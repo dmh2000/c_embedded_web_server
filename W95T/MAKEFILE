@@ -1,0 +1,8 @@
+!include ..\lint.mak
+	
+all : ewsw95t.out qw95t.out binapp.out
+
+headers : ewsw95t.cbk qw95t.cbk binapp.cbk socketq.hbk
+
+bak : ewsw95t.bak qw95t.bak binapp.bak
+

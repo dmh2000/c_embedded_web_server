@@ -1,0 +1,16 @@
+!include ..\lint.mak
+	
+all : ews001.out ews002.out ews003.out ews004.out ews005.out ews006.out
+	
+ews001.out : ews001.c
+ews002.out : ews002.c
+ews003.out : ews003.c
+ews004.out : ews004.c
+ews005.out : ews005.c
+ews006.out : ews006.c
+
+headers: ews001.cbk ews002.cbk ews003.cbk ews004.cbk ews005.cbk ews006.cbk
+
+clean :
+	rm *.cbk *.out *.hbk
+	

@@ -1,0 +1,6 @@
+-i..\inc
+-esym(534,em_strlwr,vsprint,vprintf)
+-e765
+-e759
+-e754
+
